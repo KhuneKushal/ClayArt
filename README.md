@@ -74,17 +74,6 @@ ClayArt bridges the gap between traditional pottery makers and modern customers.
 
 ---
 
-## 📱 Color Scheme & Branding
-
-| Color | Hex Code | Usage |
-|-------|----------|-------|
-| Terracotta | `#C96236` | Primary brand color, buttons, accents |
-| Cream | `#F5F1E8` | Background color, cards |
-| Sage Green | `#8B9A7D` | Secondary accents |
-| Dark Brown | `#3E3E3E` | Text color |
-| White | `#FFFFFF` | Contrast and highlights |
-
----
 
 ## 🚀 How to Setup & Run Locally
 
