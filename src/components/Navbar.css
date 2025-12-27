@@ -1,0 +1,147 @@
+.nav {
+  background: #F5F1E8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C96236;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: #8B9A7D;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  color: #3E3E3E;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #C96236;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #3E3E3E;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background: #F5F1E8;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    gap: 0;
+    padding: 2rem 0;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .menu li {
+    margin: 2rem 0;
+  }
+
+  .menu a {
+    padding: 0.5rem 0;
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .menu li {
+    margin: 1.5rem 0;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .menu {
+    top: 50px;
+    padding: 1.5rem 0;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+}

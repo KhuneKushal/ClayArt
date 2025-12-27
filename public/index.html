@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ClayArt - Handmade Pottery & Ceramics Gallery. Explore beautiful artisan ceramic pieces.">
+    <meta name="theme-color" content="#8B7355">
+    <title>ClayArt - Handmade Pottery & Ceramics</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%238B7355'/><path d='M50 20 Q60 30 60 45 Q60 65 50 75 Q40 65 40 45 Q40 30 50 20' fill='%23D4C5B9'/></svg>">
+    <!-- Noupe Chatbot Widget -->
+    <script async defer src='https://www.noupe.com/embed/019b6064f7ca7e28b566a849d602697ffcad.js'></script>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <!-- Ensure Noupe chatbot is loaded -->
+    <script>
+        // Function to trigger Noupe chatbot
+        window.openNoupeChat = function() {
+            // Try multiple methods to open the chat
+            setTimeout(() => {
+                // Method 1: Look for Noupe object
+                if (window.Noupe && typeof window.Noupe.openChat === 'function') {
+                    window.Noupe.openChat();
+                    return true;
+                }
+                
+                // Method 2: Click the chat button
+                const chatButtons = document.querySelectorAll(
+                    'button[aria-label*="chat"], ' +
+                    'button[aria-label*="Chat"], ' +
+                    '[data-noupe-chat], ' +
+                    '.noupe-chat-button, ' +
+                    'iframe[src*="noupe"]'
+                );
+                
+                for (let btn of chatButtons) {
+                    if (btn.click) {
+                        btn.click();
+                        return true;
+                    }
+                }
+                
+                // Method 3: Find any chat widget
+                const allButtons = document.querySelectorAll('button');
+                for (let btn of allButtons) {
+                    const text = btn.textContent.toLowerCase();
+                    if (text.includes('chat') || text.includes('💬')) {
+                        btn.click();
+                        return true;
+                    }
+                }
+                
+                console.log('Could not find chat button');
+                return false;
+            }, 500);
+        };
+        
+        // Log that the function is available
+        console.log('Noupe chat opener initialized');
+    </script>
+</body>
+</html>

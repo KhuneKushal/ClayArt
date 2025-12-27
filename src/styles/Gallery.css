@@ -1,0 +1,173 @@
+.gallery {
+  padding: 2rem;
+  background: #F5F1E8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery h1 {
+  text-align: center;
+  color: #3E3E3E;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filters button {
+  background: #FFFFFF;
+  border: 1px solid #C96236;
+  color: #C96236;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.filters button.active {
+  background: #C96236;
+  color: #FFFFFF;
+}
+
+.filters button:hover {
+  background: #C96236;
+  color: #FFFFFF;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.purchase-note {
+  text-align: center;
+  color: #3E3E3E;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+  color: #3E3E3E;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  color: #C96236;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.modal-content .description {
+  color: #3E3E3E;
+  margin-bottom: 1rem;
+}
+
+.close-modal {
+  background: #C96236;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background: #8B9A7D;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 1.5rem;
+  }
+
+  .gallery h1 {
+    font-size: 1.8rem;
+  }
+
+  .filters {
+    gap: 0.3rem;
+  }
+
+  .filters button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    padding: 1rem;
+  }
+
+  .gallery h1 {
+    font-size: 1.5rem;
+  }
+
+  .filters {
+    gap: 0.25rem;
+  }
+
+  .filters button {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-content img {
+    height: 250px;
+  }
+}

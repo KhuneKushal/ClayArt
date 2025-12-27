@@ -1,0 +1,33 @@
+/* Noupe Chatbot Widget Styles */
+
+/* Ensure chat widget is visible */
+[class*="noupe"],
+[data-noupe],
+[class*="chat-widget"],
+[class*="chatbot"] {
+  z-index: 9999 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Make sure iframes for chat are visible */
+iframe[src*="noupe"],
+iframe[data-chat],
+.noupe-container {
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Floating chat button styling */
+.noupe-chat-button,
+[role="button"][aria-label*="chat"],
+[role="button"][aria-label*="Chat"] {
+  z-index: 9998 !important;
+}
+
+/* Hide native elements that might conflict */
+.hidden-chat,
+[style*="display: none"] {
+  /* Don't hide actual chat widgets */
+}

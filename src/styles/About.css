@@ -1,0 +1,237 @@
+.about-page {
+  background: #F5F1E8;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #C96236 0%, #8B9A7D 100%);
+  color: #FFFFFF;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.about-hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 700px;
+}
+
+.about-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #C96236;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.about-text p {
+  color: #3E3E3E;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+.about-section.alternate .section-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.team-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 5px solid #C96236;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.team-member h3 {
+  color: #C96236;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.team-member p {
+  color: #3E3E3E;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.about-section.heritage {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about-section.heritage h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #C96236;
+  margin-bottom: 2rem;
+}
+
+.about-section.heritage p {
+  color: #3E3E3E;
+  line-height: 1.9;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2.5rem 1.5rem;
+    min-height: 250px;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-section.heritage {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .team-member {
+    padding: 1.5rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.1rem;
+  }
+
+  .team-member p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 2rem 1rem;
+    min-height: 200px;
+  }
+
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-hero p {
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .about-section.heritage {
+    padding: 1.5rem;
+  }
+
+  .about-section.heritage p {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .team-member {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .team-member h3 {
+    font-size: 1rem;
+  }
+
+  .team-member p {
+    font-size: 0.85rem;
+  }
+}
